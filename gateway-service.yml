@@ -17,7 +17,7 @@ spring:
           enabled: true
       routes: 
         - id: camion-service
-          uri: lb://CAMION-SERVICE
+          uri: lb://camion-service
           predicates:
             - Path=/apicamion/**
 
