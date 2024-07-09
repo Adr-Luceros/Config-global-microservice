@@ -1,12 +1,15 @@
 server:
   port: ${PORT:8860}
+
 eureka:
   client:
-    register-with-eureka:    true
+    register-with-eureka: true
     #fetch-registry: false
-    serviceurl:
+    serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-message: Configuracion de camion en el servidor levantado!
+  instance:
+    hostname: localhost
+
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -17,6 +20,11 @@ spring:
     hibernate:
       ddl-auto: update
       database-platform: org.hibernate.dialect.MySQLDialect
+  application:
+    name: camion-service  # Añadir nombre de la aplicación para el registro en Eureka
   cloud:
     config:
-      uri: http://localhost.8850
+      uri: http://localhost:8850
+
+message: Configuracion de camion en el servidor levantado!
+
