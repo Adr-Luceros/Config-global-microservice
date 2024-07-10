@@ -18,7 +18,7 @@ spring:
           enabled: true
       routes: 
         - id: capacidad-service
-          uri: lb://CAPACIDAD-SERVICE
+          uri: ${POSTS_ROUTE_URI:http://localhost:8080}
           predicates:
             - Path=/apicapacidad/**
 
