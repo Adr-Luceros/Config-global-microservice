@@ -20,6 +20,8 @@ spring:
     hibernate:
       ddl-auto: update
       database-platform: org.hibernate.dialect.MySQLDialect
+  application:
+    name: capacidad-service  # Añadir nombre de la aplicación para el registro en Eureka
   cloud:
     config:
       uri: http://localhost.8850
