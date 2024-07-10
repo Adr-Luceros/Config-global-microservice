@@ -18,8 +18,9 @@ spring:
           enabled: true
       routes: 
         - id: capacidad-service
-          uri: ${POSTS_ROUTE_URI:http://localhost:8080}
+          uri: lb://CAPACIDAD-SERVICE  # Usar el balanceador de carga si se registra en Eureka
           predicates:
             - Path=/apicapacidad/**
+
 
 
