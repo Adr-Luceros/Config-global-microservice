@@ -17,9 +17,9 @@ spring:
         locator:
           enabled: true
       routes: 
-        - id: camion-service
-          uri: lb://camion-service
+        - id: capacidad-service
+          uri: lb://capacidad-service
           predicates:
-            - Path=/apicamion/**
+            - Path=/apicapacidad/**
 
 
