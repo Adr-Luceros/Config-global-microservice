@@ -53,7 +53,7 @@ spring:
           predicates:
             - Path=/apiflete/**
         - id: personal-service
-          uri: lb:/personal-service
+          uri: lb://personal-service
           predicates:
             - Path=/apipersonal/**
         - id: picking-service
