@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8854}
+  port: ${PORT:${SERVER_PORT:0}}
 message: Configuracion de tienda en el servidor levantado!
 spring:
   datasource:
@@ -11,12 +11,16 @@ spring:
     hibernate:
       ddl-auto: update
       database-platform: org.hibernate.dialect.MySQLDialect
+  application:
+    name: tienda-service
   cloud:
     config:
       uri: http://localhost.8850
 eureka:
   client:
-    register-with-eureka:    true
-    #fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     serviceurl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
