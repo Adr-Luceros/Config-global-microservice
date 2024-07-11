@@ -47,7 +47,7 @@ spring:
         - id: excel-service
           uri: lb://excel-service
           predicates:
-            - Path=/apiexcel/**
+            - Path=/api/v1/recopilar/**
         - id: flete-service
           uri: lb://flete-service
           predicates:
