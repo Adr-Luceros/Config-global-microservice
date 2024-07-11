@@ -16,14 +16,11 @@ spring:
     name: gateway-service
   cloud:
     gateway: 
-      discovery:
-        locator:
-          enabled: true
       routes: 
-        - id: capacidad-service
-          uri: lb://CAPACIDAD-SERVICE  
-          predicates:
-            - Path=/apicapacidad/**
+      - id: capacidad-service
+        uri: lb://CAPACIDAD-SERVICE  
+        predicates:
+        - Path=/apicapacidad/**
 
 
 
