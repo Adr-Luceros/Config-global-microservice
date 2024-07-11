@@ -5,7 +5,7 @@ eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
-    serviceurl:
+    service-url:
       defaultZone: http://localhost:8761/eureka/
   instance:
     hostname: localhost
@@ -15,16 +15,12 @@ spring:
   application:
     name: gateway-service
   cloud:
-    gateway: 
+    gateway:
       discovery:
         locator:
           enabled: true
-      routes: 
-      - id: capacidad-service
-        uri: lb://CAPACIDAD-SERVICE  
-        predicates:
-        - Path=/apicapacidad/**
-      
-
-
-
+      routes:
+        - id: capacidad-service
+          uri: lb://CAPACIDAD-SERVICE
+          predicates:
+            - Path=/apicapacidad/**
