@@ -24,4 +24,4 @@ spring:
     name: capacidad-service  # Añadir nombre de la aplicación para el registro en Eureka
   cloud:
     config:
-      uri: http://localhost.8850
+      uri: http://localhost:8850
