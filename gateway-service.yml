@@ -21,6 +21,6 @@ spring:
           enabled: true
       routes:
         - id: capacidad-service
-          uri: lb://CAPACIDAD-SERVICE
+          uri: lb://capacidad-service
           predicates:
             - Path=/apicapacidad/**
