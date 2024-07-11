@@ -24,3 +24,7 @@ spring:
           uri: lb://capacidad-service
           predicates:
             - Path=/apicapacidad/**
+        - id: camion-service
+          uri: lb://camion-service
+          predicates:
+            - Path=/apicamion/**
