@@ -28,3 +28,59 @@ spring:
           uri: lb://camion-service
           predicates:
             - Path=/apicamion/**
+        - id: cargo-service
+          uri: lb://cargo-service
+          predicates:
+            - Path=/apicargo/**
+        - id: entrega-service
+          uri: lb://entrega-service
+          predicates:
+            - Path=/apientrega/**
+        - id: estadopicking-service
+          uri: lb://estadopicking-service
+          predicates:
+            - Path=/apiestadopicking/**
+        - id: estadoentrega-service
+          uri: lb://estadoentrega-service
+          predicates:
+            - Path=/apiestadoentrega/**
+        - id: excel-service
+          uri: lb://excel-service
+          predicates:
+            - Path=/apiexcel/**
+        - id: flete-service
+          uri: lb://flete-service
+          predicates:
+            - Path=/apiflete/**
+        - id: personal-service
+          uri: lb:/personal-service
+          predicates:
+            - Path=/apipersonal/**
+        - id: picking-service
+          uri: lb://picking-service
+          predicates:
+            - Path=/apipicking/**
+        - id: rolcargo-service
+          uri: lb://rolcargo-service
+          predicates:
+            - Path=/apirolcargo/**
+        - id: ruta-service
+          uri: lb://ruta-service
+          predicates:
+            - Path=/apiruta/**
+        - id: tarifario-service
+          uri: lb://tarifario-service
+          predicates:
+            - Path=/apitarifario/**
+        - id: tienda-service
+          uri: lb://tienda-service
+          predicates:
+            - Path=/apitienda/**
+        - id: tipoflete-service
+          uri: lb://tipoflete-service
+          predicates:
+            - Path=/apitipoflete/**
+        - id: viaje-service
+          uri: lb://viaje-service
+          predicates:
+            - Path=/apiviaje/**
