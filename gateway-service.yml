@@ -23,6 +23,7 @@ spring:
         - Path=/apicapacidad/**
       - id: viaje-service
         uri: http://localhost:8863  
+        uri: lb://viaje-service  
         predicates:
         - Path=/apiviaje/**
 
