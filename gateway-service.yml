@@ -21,6 +21,10 @@ spring:
         uri: lb://CAPACIDAD-SERVICE  
         predicates:
         - Path=/apicapacidad/**
+      - id: viaje-service
+        uri: http://localhost:8863  
+        predicates:
+        - Path=/apiviaje/**
 
 
 
