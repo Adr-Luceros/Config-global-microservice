@@ -1,5 +1,5 @@
 server:
-  port: ${PORT:8862}
+  port: ${PORT:${SERVER_PORT:0}}
 message: Configuracion de entrega en el servidor levantado!
 spring:
   datasource:
@@ -11,6 +11,8 @@ spring:
     hibernate:
       ddl-auto: update
       database-platform: org.hibernate.dialect.MySQLDialect
+  application:
+    name: entrega-service
   cloud:
     config:
       uri: http://localhost.8850
@@ -20,3 +22,5 @@ eureka:
     #fetch-registry: false
     serviceurl:
       defaultZone: http://localhost:8761/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
